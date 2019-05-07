@@ -1,0 +1,24 @@
+<tool-header headerText="New Car Tool"></tool-header>
+
+<car-table [cars]="cars"></car-table>
+
+<form [formGroup]="carForm">
+	<div>
+		<label for="new-car-input">New Make</label>
+		<input type="text" id="new-car-input" formControlName="make">
+
+		<label for="new-car-input">New Model</label>
+		<input type="text" id="new-model-input" formControlName="model">
+
+		<label for="new-car-input">New Year</label>
+		<input type="number" id="new-year-input" formControlName="year">
+
+		<label for="new-car-input">New Color</label>
+		<input type="text" id="new-color-input" formControlName="color">
+
+		<label for="new-car-input">New Price</label>
+		<input type="number" id="new-price-input" formControlName="price">
+	</div>
+	<button (click)="addCar()">Add Car</button>
+</form>
+
