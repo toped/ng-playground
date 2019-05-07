@@ -1,0 +1,15 @@
+<table style="margin-bottom: 20px;">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Make</th>
+			<th>Model</th>
+			<th>Year</th>
+			<th>Color</th>
+			<th>Price</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="car-table-row" *ngFor="let car of cars" [car]= "car"></tr>
+	</tbody>
+</table>
