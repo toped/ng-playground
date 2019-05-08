@@ -7,9 +7,10 @@
 			<th>Year</th>
 			<th>Color</th>
 			<th>Price</th>
+			<th>Delete</th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr class="car-table-row" *ngFor="let car of cars" [car]= "car"></tr>
+		<tr class="car-table-row" *ngFor="let car of cars" [car]= "car" (deleteCar)="doDeleteCar($event)"></tr>
 	</tbody>
 </table>

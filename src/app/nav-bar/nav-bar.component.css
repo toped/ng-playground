@@ -4,6 +4,8 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #1976d2;
+	position: sticky;
+	top: 0;
 }
 
 li {
