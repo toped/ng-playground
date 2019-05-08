@@ -1,0 +1,7 @@
+input.last-name + span {
+	display: none;
+}
+
+input.ng-invalid.ng-touched.last-name + span {
+	display: inline;
+}

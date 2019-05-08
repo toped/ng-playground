@@ -1,0 +1,12 @@
+<form [formGroup]="funForm" style="margin-top: 20px">
+	<div>
+		{{funForm.value.newText | myEllipsis: funForm.value.newLength}}
+	</div>
+	<div>
+		<textarea name="fun-box-input" id="funbox" cols="30" rows="10" formControlName="newText"></textarea>
+	</div>
+
+	<div>
+		<input type="number" id="length-input" formControlName="newLength">
+	</div>
+</form>

@@ -2,55 +2,18 @@
 <ul>
     <li *ngFor="let color of colors">{{color}}</li>
 
-    <div id="codeSnippet">
-        <pre>
-			<code>
-	&lt;li *ngFor="let color of colors">{{color}}&lt;/li>
-			</code>
-		</pre>
-    </div>
-
     <ng-template ngFor [ngForOf]="colors" let-color>
         <li>{{color}}</li>
         <li>{{color | uppercase}}</li>
     </ng-template>
-
-    <div id="codeSnippet">
-        <pre>
-			<code>
-	&lt;ng-template ngFor [ngForOf]="colors" let-color>
-		&lt;li>{{color}}&lt;/li>
-		&lt;li>{{color | uppercase}}&lt;/li>
-	&lt;/ng-template>
-			</code>
-		</pre>
-    </div>
 
     <ng-container *ngFor="let color of colors">
         <li>{{color}}</li>
         <li>{{color | uppercase}}</li>
     </ng-container>
 
-    <div id="codeSnippet">
-        <pre>
-			<code>
-	&lt;ng-container *ngFor="let color of colors">
-		&lt;li>{{color}}&lt;/li>
-		&lt;li>{{color | uppercase}}&lt;/li>
-	&lt;/ng-container>
-			</code>
-		</pre>
-    </div>
 </ul>
 
-<form [formGroup]="colorForm">
-    <div>
-        <label for="new-color-input">New Color</label>
-    </div>
-    <div>
-        <input type="text" id="new-color-input" formControlName="newColor">
-    </div>
-    <button (click)="addColor()">Add Color</button>
-</form>
+<color-form buttonText="Submit Text" (submitColor)="addColor($event)"></color-form>
 
 <hr>

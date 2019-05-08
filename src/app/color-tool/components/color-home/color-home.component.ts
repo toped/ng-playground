@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
 	selector: 'color-home',
@@ -11,7 +10,6 @@ export class ColorHomeComponent implements OnInit {
 
 	headerText = 'Color Tool';
 	colors = [ 'green', 'blue', 'olive', 'crimson', 'purple' ];
-	colorForm: FormGroup;
 
 	// private fb: FormBuilder;
 
@@ -19,16 +17,13 @@ export class ColorHomeComponent implements OnInit {
 	// 	this.fb = fb;
 	// }
 
-	constructor( private fb: FormBuilder ) { }
+	constructor() { }
 
 	ngOnInit() {
-		this.colorForm = this.fb.group({
-			newColor: '',
-		});
 	}
 
-	addColor() {
-		this.colors = this.colors.concat(this.colorForm.value.newColor);
-		this.colorForm.reset();
+	addColor(newColor: string) {
+		this.colors = this.colors.concat(newColor);
+		// this.colors.push(this.colorForm.value.newColor);
 	}
 }
