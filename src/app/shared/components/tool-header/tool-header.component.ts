@@ -10,6 +10,9 @@ export class ToolHeaderComponent implements OnInit {
 	@Input()
 	headerText = '';
 
+	@Input()
+	headerDesc = '';
+
 	constructor() { }
 
 	ngOnInit() {
